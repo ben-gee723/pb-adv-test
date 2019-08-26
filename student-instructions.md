@@ -73,9 +73,9 @@ const hourTracking = [
 ```
 
 #### Classes
-* Create a blueprint for your class at DCI - using the "class" syntax in javascript. The class should contain whether the course is a year long course or an orientation course, who the teacher is, whether the group is learning marketing or web development and the number of students taking the course.
-The class should also have a method that checks how big a classroom should be depending on the number of students taking the course: 1 student =  2m².
-* Print all the details of the course: "_This is a year long web development course taught by John Smith. There are 10 students taking the course. The classroom should be 20m²_"s
+* Create a blueprint for a class at DCI - using the "class" syntax in javascript. The class should be named "Course" The class should contain who the teacher is, whether the group is learning marketing or web development and the number of students taking the course.
+* The class should also have a method named "spaceNeeded" that checks how big a classroom should be depending on the number of students taking the course: 1 student =  2m².
+* Create a method named "details" to print all the information of the course: "_This is a web development course taught by John Smith. There are 10 students taking the course._".
 
 ### Problem Solving 
 * Create a function named "_capitalizeFirstLetter_" that accepts a string as an argument. The function should convert the first character of each word to uppercase. **Example** _the quick brown fox_ -> _The Quick Brown Fox_
