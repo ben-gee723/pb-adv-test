@@ -86,13 +86,14 @@ const hourTracking = [
 
 #### Classes 
 * Create a blueprint for a class at DCI - using the "class" syntax in javascript. The class should be named "Course" The class should contain who the teacher is, whether the group is learning marketing or web development and the number of students taking the course.
-* The class should also have a method named "spaceNeeded" that checks how big a classroom should be depending on the number of students taking the course: 1 student =  2m². Print your solution to the console.
+* The class should also have a method named "spaceNeeded" that checks how big a classroom should be depending on the number of students taking the course: 1 student =  2m². E.g. If a course has 10 students, then print: "_The class should be 20m²._". Print your solution to the console.
 * Create a method named "details" to print all the information of the course: "_This is a web development course taught by John Smith. There are 10 students taking the course._". Print your solution to the console.
+* **Note**: Please use the phrases found in the instructions above and just change the output depending on the teacher, course, number of students etc. 
 
 **Expected Output**
 ```javascript
 course.spaceNeeded();
-`The class should be 44m²`
+`The class should be 44m².`
 
 course.details();
 `This is a web development course taught by John. There are 22 students taking the course.`
