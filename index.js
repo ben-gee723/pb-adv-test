@@ -7,4 +7,5 @@
 
 
 // Do not edit or answer below this line
+// EDITING MODULE EXPORTS WILL RESULT IN AN AUTOMATIC FAIL
 module.exports = {profileData, convertObjectToArray, convertArrayData, getNestedData, wordConverter, calculateHours, Course, capitalizeFirstLetter, validPin};
