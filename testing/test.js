@@ -1,23 +1,16 @@
 const { profileData, convertObjectToArray, convertArrayData, getNestedData, wordConverter, calculateHours, Course, capitalizeFirstLetter, validPin } = require("./index");
 
-describe('profileData', () => {
-    test.each`
-    input| expected 
-    ${{
-            name: "John",
-            surname: "Smith",
-            age: 33,
-            city: "Paris"
-        }} | ${{
-            name: "John",
-            surname: "Smith",
-            age: 33,
-            city: "Paris"
-        }}
-    `('input $input be $expected', ({ input, expected }) => {
-            expect(input).toStrictEqual(expected);
-        });
+const profileData = require('./profiledata');
+
+describe('Profile Data object', () => {
+  const propsToCheck = ['name', 'surname', 'age', 'city'];
+  propsToCheck.forEach(prop => {
+    test(`has ${prop} property`, () => {
+      expect(profileData).toHaveProperty(prop);
+    });
+  });
 });
+
 
 describe('convertObjectToArray should', () => {
     test.each`
