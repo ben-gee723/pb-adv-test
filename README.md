@@ -104,8 +104,7 @@ course.details();
 
 **Expected Output**
 ```javascript
-capitalizeFirstLetter("hey there"));
-`Hey There`
+capitalizeFirstLetter("hey there"); → `Hey There`
 ```
 
 * Look at the unit tests for validating a pin. Write code that fulfills the requirements of the tests. 
@@ -120,17 +119,17 @@ The function should print true if the pin meets all the requirements and false i
 
 **Expected Output**
 ```javascript
-validPin("1234")); → true
+validPin("1234"); → true
 
-validPin("1235")); → false // last number should be even
+validPin("1235"); → false // last number should be even
 
-validPin("wwww")); → false // should only consist of numbers
+validPin("wwww"); → false // should only consist of numbers
 
-validPin("12345")); → false // should be 4 digits, not 5
+validPin("12345"); → false // should be 4 digits, not 5
 
-validPin("2222")); → false // should have at least 2 different digits
+validPin("2222"); → false // should have at least 2 different digits
 
-validPin("1000")); → false // does not add up to at least 5
+validPin("1000"); → false // does not add up to at least 5
 
-validPin("2224")); → true 
+validPin("2224"); → true 
 ```
