@@ -30,7 +30,7 @@ myObj = {
 ```
 
 #### Arrays 
-* Use array methods to manipulate the data the array below. Change the data to get the result below. Print your solution to the console.
+* Use array methods to manipulate the data the array below. The first two items in the array should switch positions and the third item should be replaced by a new item. Change the data to get the result below. Print your solution to the console.
 
 **Original Array**
 ```javascript
