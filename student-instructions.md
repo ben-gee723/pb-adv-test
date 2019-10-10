@@ -3,6 +3,7 @@
 * Create an index.js file and work from there.
 * Follow all of the instructions below to complete the test.
 * Make sure that the names of your variables/functions match the names in the instructions below.
+* You can check whether your answers pass the unit tests provided. However, do not spend too much time trying to fix your issues to make them pass the tests - move on and try to attempt all questions.
 * Remember to print all your solutions.
 * Good luck!
 
