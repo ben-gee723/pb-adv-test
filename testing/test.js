@@ -1,12 +1,12 @@
 const { profileData, convertObjectToArray, convertArrayData, createGrid, wordConverter, calculateHours, Course, capitalizeFirstLetter, validPin } = require("./index");
 
 describe('Profile Data object', () => {
-  const propsToCheck = ['name', 'surname', 'age', 'city'];
-  propsToCheck.forEach(prop => {
-    test(`has ${prop} property`, () => {
-      expect(profileData).toHaveProperty(prop);
+    const propsToCheck = ['name', 'surname', 'age', 'city'];
+    propsToCheck.forEach(prop => {
+        test(`has ${prop} property`, () => {
+            expect(profileData).toHaveProperty(prop);
+        });
     });
-  });
 });
 
 describe('convertObjectToArray should', () => {
@@ -14,7 +14,8 @@ describe('convertObjectToArray should', () => {
     input| expected 
     ${{ "1": 10, "2": 20 }} | ${[["1", 10], ["2", 20]]}
     ${{ "name": "John", "age": 20 }} | ${[["name", "John"], ["age", 20]]}
-    `('input $input be $expected', ({ input, expected }) => {
+
+    `('convert an object containing properties into a nested array populated by the object properties', ({ input, expected }) => {
         expect(convertObjectToArray(input)).toStrictEqual(expected);
     });
 });
@@ -24,7 +25,7 @@ describe('convertArrayData should', () => {
     input| expected 
     ${["coffee", "tea", "juice"]} | ${["tea", "coffee", "milk"]}
     ${["water", "vodka", "milkshake"]} | ${["vodka", "water", "milk"]}
-    `('input $input be $expected', ({ input, expected }) => {
+    `('switch first two array items and replace the third', ({ input, expected }) => {
         expect(convertArrayData(input)).toStrictEqual(expected);
     });
 });
@@ -33,11 +34,11 @@ describe('createGrid should', () => {
     test.each`
     size | char | expected 
     ${3} | ${"*"} | ${[["*", "*", "*"],
-                       ["*", "*", "*"],
-                       ["*", "*", "*"]]}
+        ["*", "*", "*"],
+        ["*", "*", "*"]]}
     ${2} | ${"f"} | ${[["f", "f"],
-                       ["f", "f"]]}
-    `('input $size and $char be $expected', ({ size, char, expected }) => {
+        ["f", "f"]]}
+    `('create a grid which is $size by $size and populated with $char', ({ size, char, expected }) => {
             expect(createGrid(size, char)).toStrictEqual(expected);
         });
 });
@@ -66,7 +67,14 @@ describe('calculateHours should', () => {
             { day: 'Thursday', start: 7, end: 14 },
             { day: 'Friday', start: 6, end: 12 },
         ]} | ${36}
-    `('input $input be $expected', ({ input, expected }) => {
+    input| expected 
+    ${[
+            { start: 2, end: 10 },
+            { start: 1, end: 7 },
+            { start: 90, end: 100 },
+            { start: 7, end: 14 },
+        ]} | ${31}
+    `('calculate accumulation of (end - start)', ({ input, expected }) => {
             expect(calculateHours(input)).toBe(expected);
         });
 });
@@ -77,7 +85,7 @@ describe('Course details should', () => {
     teacher | type | number | expected 
     ${"John"} | ${"web development"} | ${22} | ${"This is a web development course taught by John. There are 22 students taking the course."}  
     ${"Jane"} | ${"marketing"} | ${19} | ${"This is a marketing course taught by Jane. There are 19 students taking the course."} 
-    `('input $teacher, $type and $number be $expected', ({teacher, type, number, expected }) => {
+    `('return the description: $expected', ({ teacher, type, number, expected }) => {
         expect(new Course(teacher, type, number).details()).toStrictEqual(expected);
     });
 });
@@ -86,9 +94,9 @@ describe('Course details should', () => {
 describe('Course spaceNeeded should', () => {
     test.each`
     teacher | type | number | expected 
-    ${"John"} | ${"web development"} | ${22} | ${"the class should be 44m2 big"}  
-    ${"Jane"} | ${"marketing"} | ${19} | ${"the class should be 38m2 big"} 
-    `('input $teacher, $type and $number be $expected', ({teacher, type, number, expected }) => {
+    ${"John"} | ${"web development"} | ${22} | ${"The class should be 44m2"}  
+    ${"Jane"} | ${"marketing"} | ${19} | ${"The class should be 38m2"} 
+    `('return the description: $expected', ({ teacher, type, number, expected }) => {
         expect(new Course(teacher, type, number).spaceNeeded()).toStrictEqual(expected);
     });
 });
@@ -103,7 +111,7 @@ describe('capitalizeFirstLetter should', () => {
     ${123} | ${"123"}
     ${"????"} | ${"????"}
     ${true} | ${"True"}
-    `('testing if %o is the same as $expected', ({ input, expected }) => {
+    `('capitalize every first letter', ({ input, expected }) => {
         expect(capitalizeFirstLetter(input)).toBe(expected);
     });
 });
