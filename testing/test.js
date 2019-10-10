@@ -9,7 +9,6 @@ describe('Profile Data object', () => {
   });
 });
 
-
 describe('convertObjectToArray should', () => {
     test.each`
     input| expected 
