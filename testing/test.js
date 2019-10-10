@@ -1,7 +1,5 @@
 const { profileData, convertObjectToArray, convertArrayData, getNestedData, wordConverter, calculateHours, Course, capitalizeFirstLetter, validPin } = require("./index");
 
-const profileData = require('./profiledata');
-
 describe('Profile Data object', () => {
   const propsToCheck = ['name', 'surname', 'age', 'city'];
   propsToCheck.forEach(prop => {
