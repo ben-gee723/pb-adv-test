@@ -68,7 +68,6 @@ createGrid(3, "*")
 
 * Create a function called "_calculateHours_" which calculate how many hours (total) this person worked in the week based on the data structure `hourTracking` below. **Note**: start is always morning time, end is always afternoon. Print your solution to the console.
 
-[5]
 **Working Hours**
 ```javascript
 const hourTracking = [
