@@ -1,4 +1,4 @@
-const { profileData, convertObjectToArray, convertArrayData, getNestedData, wordConverter, calculateHours, Course, capitalizeFirstLetter, validPin } = require("./index");
+const { profileData, convertObjectToArray, convertArrayData, createGrid, wordConverter, calculateHours, Course, capitalizeFirstLetter, validPin } = require("./index");
 
 describe('Profile Data object', () => {
   const propsToCheck = ['name', 'surname', 'age', 'city'];
@@ -29,14 +29,17 @@ describe('convertArrayData should', () => {
     });
 });
 
-describe('getNestedData should', () => {
+describe('createGrid should', () => {
     test.each`
-    input| expected 
-    ${[["1", "2"], ["hello"]]} | ${"12hello"}
-    ${[["vodka", "water", "milk"], [1, 2, 3]]} | ${"vodkawatermilk123"}
-    `('input $input be $expected', ({ input, expected }) => {
-        expect(getNestedData(input)).toStrictEqual(expected);
-    });
+    size | char | expected 
+    ${3} | ${"*"} | ${[["*", "*", "*"],
+                       ["*", "*", "*"],
+                       ["*", "*", "*"]]}
+    ${2} | ${"f"} | ${[["f", "f"],
+                       ["f", "f"]]}
+    `('input $size and $char be $expected', ({ size, char, expected }) => {
+            expect(createGrid(size, char)).toStrictEqual(expected);
+        });
 });
 
 describe('wordConverter should', () => {
