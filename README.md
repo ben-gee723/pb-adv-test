@@ -30,7 +30,7 @@ myObj = {
 ```
 
 #### Arrays 
-* Use array methods to manipulate the data the array below. The first two items in the array should switch positions and the third item should be replaced by a new item. Change the data to get the result below. Print your solution to the console.
+* Create a function named "_convertArrayData_". Use array methods to manipulate the data the array below. The first two items in the array should switch positions and the third item should be replaced by a new item. Change the data to get the result below. Print your solution to the console.
 
 **Original Array**
 ```javascript
@@ -100,14 +100,15 @@ course.details();
 ```
 
 ### Problem Solving 
-* Write function that accepts a string as an argument. The function should convert the first character of each word to uppercase. **Example** _the quick brown fox_ → _The Quick Brown Fox_. Print your solution to the console.
+* Write function named "_capitalizeFirstLetter_" that accepts a string as an argument. The function should convert the first character of each word to uppercase. **Example** _the quick brown fox_ → _The Quick Brown Fox_. Print your solution to the console.
 
 **Expected Output**
 ```javascript
 capitalizeFirstLetter("hey there"); → `Hey There`
 ```
 
-* Look at the unit tests for validating a pin. Write code that fulfills the requirements of the tests. 
+* Look at the unit tests for validating a pin. Create a function named "_validPin_" that fulfills the requirements of the tests. 
+
 **Requirements**:
     * The pin code must consist of only numbers.
     * The pin code must be 4 digits long. 
