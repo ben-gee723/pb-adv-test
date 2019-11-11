@@ -134,3 +134,15 @@ validPin("1000"); → false // does not add up to at least 5
 
 validPin("2224"); → true 
 ```
+**Testing with Jest**
+* The `test.js` file and `package.json` file have been provided for you.
+
+* Firstly, run the following command in the appropriate folder to install and save jest as a dependency.
+```
+npm install --save-dev jest
+```
+* Run the following command in order to run the test. The script has already been added to the `package.json` file.
+```
+npm run test
+```
+* For more information, you can refer to Jest's [documentation](https://jestjs.io/docs/en/getting-started).
