@@ -94,8 +94,8 @@ describe('Course details should', () => {
 describe('Course spaceNeeded should', () => {
     test.each`
     teacher | type | number | expected 
-    ${"John"} | ${"web development"} | ${22} | ${"The class should be 44m²."}  
-    ${"Jane"} | ${"marketing"} | ${19} | ${"The class should be 38m²."} 
+    ${"John"} | ${"web development"} | ${22} | ${"The classroom should be 44m²."}  
+    ${"Jane"} | ${"marketing"} | ${19} | ${"The classroom should be 38m²."} 
     `('return the description: $expected', ({ teacher, type, number, expected }) => {
         expect(new Course(teacher, type, number).spaceNeeded()).toStrictEqual(expected);
     });
