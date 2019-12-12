@@ -12,8 +12,10 @@
 ### Data Structure
 
 #### Objects 
+##### 1. Key Pair Values 
 * Create an object called "profileData". Add four key pair values to the object: name, surname, age and city.
 
+##### 2. Object to Array
 * Convert an object into a nested array of key pair values. Look the example below.
 
 **Given Object**
@@ -30,6 +32,8 @@ myObj = {
 ```
 
 #### Arrays 
+
+##### 1. Data Manipulation
 * Create a function named "_convertArrayData_". Use array methods to manipulate the data the array below. The first two items in the array should switch positions and the third item should be replaced by a new item. Change the data to get the result below. Print your solution to the console.
 
 **Original Array**
@@ -40,10 +44,10 @@ myObj = {
 ```javascript
 ["tea", "coffee", "milk"];
 ```
-
+##### 2. Create Grid
 * Create a function called "_createGrid_", which returns a grid of a 2D array by accepting two arguments: `size` (which determines the number of nested arrays and the number of elements in each nested array) and `char` (which determines the characters in each nested array). Print your solution to the console. 
 
-**Create Grid**
+**Create Grid Function Call**
 ```javascript
 createGrid(3, "*")
 ```
@@ -54,6 +58,7 @@ createGrid(3, "*")
  ["*", "*", "*"]]
 ```
 
+##### 3. Word Converter
 * Given an array of words, create a function named "_wordConverter_" which uses an array method to add _"er"_ to the end of each string in the array. Look at the expected output below. **Important**: Do **not** use a loop to complete this task. Print your solution to the console.
 
 **Array of words**
@@ -65,7 +70,7 @@ createGrid(3, "*")
 ["smarter", "kinder", 
 "sweeter", "smaller", "clearer"]
 ```
-
+##### 4. Hour Calculation
 * Create a function called "_calculateHours_" which calculate how many hours (total) this person worked in the week based on the data structure `hourTracking` below. **Note**: start is always morning time, end is always afternoon. Print your solution to the console.
 
 **Working Hours**
@@ -99,22 +104,25 @@ course.details();
 `This is a web development course taught by John. There are 22 students taking the course.`
 ```
 
-### Problem Solving 
+#### Problem Solving 
+
+##### 1. Format your string
+
 * Write function named "_capitalizeFirstLetter_" that accepts a string as an argument. The function should convert the first character of each word to uppercase. **Example** _the quick brown fox_ → _The Quick Brown Fox_. Print your solution to the console.
 
 **Expected Output**
 ```javascript
 capitalizeFirstLetter("hey there"); → `Hey There`
 ```
-
+##### 2. Validation
 * Look at the unit tests for validating a pin. Create a function named "_validPin_" that fulfills the requirements of the tests. 
 
 **Requirements**:
-    * The pin code must consist of only numbers.
-    * The pin code must be 4 digits long. 
-    * The pin should have at least **two** different digits.
-    * The pin code's last digit should be even.
-    * The pin code should add up to at least 5. 
+* The pin code must consist of only numbers.
+* The pin code must be 4 digits long. 
+* The pin should have at least **two** different digits.
+* The pin code's last digit should be even.
+* The pin code should add up to at least 5. 
 
 The function should print `true` if the pin meets all the requirements and `false` if it does not. Print your solution to the console.
 
@@ -135,6 +143,7 @@ validPin("1000"); → false // does not add up to at least 5
 validPin("2224"); → true 
 ```
 **Testing with Jest**
+
 * The `test.js` file and `package.json` file have been provided for you.
 
 * Firstly, run the following command in the appropriate folder to install and save jest as a dependency.
